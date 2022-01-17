@@ -1,8 +1,10 @@
-## UNRELEASED
+## 0.4.5 - Mon Jan 17 2022 05:19:58
 
-**Contributor:** {{author.name}}
+**Contributor:** Theo Gravity
 
-- {{{subject}}}{{{body}}}## 0.4.3 - Mon Jan 17 2022 05:12:07
+- Merge branch 'master' of https://github.com/theogravity/toc-md
+
+## 0.4.3 - Mon Jan 17 2022 05:12:07
 
 **Contributor:** Snyk bot
 
