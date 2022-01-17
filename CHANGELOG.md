@@ -1,3 +1,13 @@
+## 0.4.3 - Mon Jan 17 2022 05:12:07
+
+**Contributor:** Snyk bot
+
+- fix: package.json & package-lock.json to reduce vulnerabilities (#13)
+
+The following vulnerabilities are fixed with an upgrade:
+- https://snyk.io/vuln/SNYK-JS-MARKED-2342073
+- https://snyk.io/vuln/SNYK-JS-MARKED-2342082
+
 ## 0.4.2 - Fri May 28 2021 19:24:44
 
 **Contributor:** chocolateboy
