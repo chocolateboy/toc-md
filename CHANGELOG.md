@@ -1,3 +1,9 @@
+## 0.4.6 - Fri Jan 28 2022 22:32:56
+
+**Contributor:** Theo Gravity
+
+- Fix cli broken require() call (#14)
+
 ## 0.4.5 - Mon Jan 17 2022 05:19:58
 
 **Contributor:** Theo Gravity
