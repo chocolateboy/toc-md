@@ -1,21 +1,22 @@
 # toc-md
 
 [![Build Status](https://github.com/chocolateboy/toc-md/workflows/test/badge.svg)](https://github.com/chocolateboy/toc-md/actions?query=workflow%3Atest)
-[![NPM Version](https://img.shields.io/npm/v/@chocolateboy/toc-md.svg)](https://www.npmjs.org/package/@chocolateboy/toc-md)
+[![NPM Version](https://img.shields.io/npm/v/@chocolateboy/toc-md.svg)](https://www.npmjs.com/package/@chocolateboy/toc-md)
 
 <!-- TOC -->
 
 - [NAME](#name)
-- [DESCRIPTION](#description)
+- [FEATURES](#features)
 - [INSTALLATION](#installation)
+- [SYNOPSIS](#synopsis)
 - [USAGE](#usage)
   - [CLI](#cli)
     - [Insert](#insert)
     - [Clean](#clean)
-  - [Advanced TOC](#advanced-toc)
-    - [Ignoring headers](#ignoring-headers)
-    - [Changing headers](#changing-headers)
-    - [Renaming anchors](#renaming-anchors)
+  - [Customizing the TOC](#customizing-the-toc)
+    - [Ignoring headers](#ignore)
+    - [Changing headers](#display)
+    - [Renaming anchors](#rename)
 - [COMPATIBILITY](#compatibility)
 - [SEE ALSO](#see-also)
 - [VERSION](#version)
@@ -28,16 +29,22 @@
 
 toc-md - a CLI tool to generate a Markdown TOC (table of contents)
 
-# DESCRIPTION
+# FEATURES
 
-This is a fork of [toc-md-alt](https://github.com/theogravity/toc-md), which is a fork of [toc-md](https://github.com/eGavr/toc-md) by [eGavr](https://github.com/eGavr). See the [changelog](CHANGELOG.md) for more details.
-
-The tool can be used for English and Russian languages.
+- [rename anchors](#rename) with a HTML tag: `<a name="new-name"></a>`
+- [omit headers](#ignore) from the TOC with a HTML comment: `<!-- TOC:ignore -->`
+- [rename headers](#display) in the TOC with a HTML comment: `<!-- TOC:display:New Header -->`
 
 # INSTALLATION
 
 ```bash
 $ npm install @chocolateboy/toc-md
+```
+
+# SYNOPSIS
+
+```bash
+$ toc-md README.md
 ```
 
 # USAGE
@@ -78,7 +85,6 @@ If the `TARGET` argument is not specified, the result will be written to `SOURCE
 
 ```bash
 $ toc-md --max-depth=4 --bullet='*' path/to/input.md path/to/output.md
-
 $ toc-md -m 4 -b '*' path/to/input.md
 ```
 
@@ -86,44 +92,49 @@ $ toc-md -m 4 -b '*' path/to/input.md
 
 ```bash
 $ toc-md --clean path/to/input.md path/to/output.md
-
 $ toc-md -c path/to/input.md
 ```
 
-## Advanced TOC
+## Customizing the TOC
 
+<a name="ignore"></a>
 ### Ignoring headers
 
-A header can be omitted from the TOC by adding a `<!-- TOC:ignore -->` HTML comment before a header declaration, e.g.:
+A header can be omitted from the TOC by adding a `<!-- TOC:ignore -->` HTML
+comment before a header declaration, e.g.:
 
-```md
+```markdown
 <!-- TOC:ignore -->
 # NPM Scripts
 ```
 
-The header `NPM Scripts` will not be displayed in the TOC.
+The `NPM Scripts` header will not be displayed in the TOC.
 
+<a name="display"></a>
 ### Changing headers
 
-The name of a header in a TOC can be changed by adding a `<!-- TOC:display:header_text -->` HTML comment before a header declaration, e.g.:
+The name of a header in a TOC can be changed by adding a `<!-- TOC:display:header_text -->`
+HTML comment before a header declaration, e.g.:
 
-```md
+```markdown
 <!-- TOC:display:Foo (Deprecated) -->
 # Foo
 ```
 
 The `Foo` header will be displayed in the TOC as `Foo (Deprecated)`.
 
+<a name="rename"></a>
 ### Renaming anchors
 
-The anchor which is generated for a header can be redefined by adding an `<a name="..."></a>` HTML tag before a header declaration, e.g.:
+The anchor which is generated for a header can be redefined by adding
+an `<a name="..."></a>` HTML tag before a header declaration, e.g.:
 
-```md
+```markdown
 <a name="foo-options"></a>
 # Options
 ```
 
-The `Options` header will be referenced by the `foo-options` anchor in the TOC.
+The `Options` header in the TOC will link to the `foo-options` anchor.
 
 # COMPATIBILITY
 
@@ -140,6 +151,10 @@ The `Options` header will be referenced by the `foo-options` anchor in the TOC.
 # AUTHOR
 
 - [eGavr](https://github.com/egavr)
+
+This is a fork of [toc-md-alt](https://www.npmjs.com/package/toc-md) by
+[theogravity](https://github.com/theogravity), which is a fork of
+[toc-md](https://www.npmjs.com/package/toc-md) by [eGavr](https://github.com/eGavr).
 
 # COPYRIGHT AND LICENSE
 
