@@ -36,7 +36,7 @@ jobs:
         run: pnpm install --prefer-offline
 
       - name: test
-        run: pnpm run prepublishOnly
+        run: pnpm run test
 
       - name: publish
         uses: JS-DevTools/npm-publish@19c28f1ef146469e409470805ea4279d47c3d35c
