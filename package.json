@@ -1,64 +1,45 @@
 {
-  "name": "toc-md-alt",
-  "version": "0.4.6",
-  "description": "Generates a markdown TOC (table of contents)",
-  "keywords": [
-    "readme",
-    "markdown",
-    "toc",
-    "table of contents"
-  ],
-  "author": {
-    "name": "Evgeniy Gavryushin",
-    "email": "job.egavr@yandex.ru",
-    "url": "https://github.com/eGavr"
-  },
-  "homepage": "https://github.com/theogravity/toc-md",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/theogravity/toc-md.git"
-  },
-  "bugs": "https://github.com/theogravity/toc-md/issues",
-  "main": "./lib/index.js",
-  "bin": {
-    "toc-md": "./bin/toc-md"
-  },
-  "dependencies": {
-    "@colors/colors": "^1.6.0",
-    "coa": "^2.0.2",
-    "inherit": "^2.2.7",
-    "lodash": "^4.17.21",
-    "marked": "^4.3.0",
-    "parse5": "^6.0.1",
-    "vow-fs": "^0.3.6",
-    "vow-node": "^0.3.0"
-  },
-  "devDependencies": {
-    "@theo.gravity/changelog-version": "^2.1.11",
-    "@theo.gravity/version-bump": "^2.0.14",
-    "eslint": "^8.57.1",
-    "git-commit-stamper": "^1.0.10",
-    "mocha": "^11.1.0",
-    "must": "^0.13.4",
-    "version-bump-plugin-git": "^2.0.1"
-  },
-  "scripts": {
-    "build": "exit 0",
-    "test": "npm run lint && npm run unit-test",
-    "test:ci": "npm run lint && npm run unit-test",
-    "lint": "eslint .",
-    "unit-test": "mocha \"test/**/*.js\"",
-    "prepare-publish": "npm run changelog:prepare && version-bump && npm run changelog:release && npm run changelog:stamp",
-    "version-bump": "version-bump",
-    "changelog:help": "changelog-version",
-    "changelog:verify": "changelog-version verify",
-    "changelog:prepare": "changelog-version prepare",
-    "changelog:stamp": "git-commit-stamper parse CHANGELOG.md",
-    "changelog:release": "changelog-version release"
-  },
-  "engines": {
-    "node": ">=0.8.0",
-    "npm": ">=1.2.10"
-  },
-  "license": "MIT"
+    "name": "toc-md-alt",
+    "version": "0.5.0",
+    "description": "Generate a markdown TOC (table of contents)",
+    "license": "MIT",
+    "author": {
+        "name": "Evgeniy Gavryushin",
+        "email": "job.egavr@yandex.ru",
+        "url": "https://github.com/eGavr"
+    },
+    "homepage": "https://github.com/chocolateboy/toc-md",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/chocolateboy/toc-md.git"
+    },
+    "bugs": "https://github.com/chocolateboy/toc-md/issues",
+    "main": "./lib/index.js",
+    "bin": {
+        "toc-md": "./bin/toc-md"
+    },
+    "dependencies": {
+        "@colors/colors": "^1.6.0",
+        "coa": "^2.0.2",
+        "inherit": "^2.2.7",
+        "lodash": "^4.17.21",
+        "marked": "^17.0.3",
+        "parse5": "^8.0.0",
+        "vow-fs": "^0.3.6",
+        "vow-node": "^0.3.0"
+    },
+    "devDependencies": {
+        "mocha": "^11.1.0",
+        "must": "^0.13.4"
+    },
+    "scripts": {
+        "build": "exit 0",
+        "test": "mocha \"test/**/*.js\""
+    },
+    "keywords": [
+        "markdown",
+        "readme",
+        "table of contents",
+        "toc"
+    ]
 }
