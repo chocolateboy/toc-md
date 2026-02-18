@@ -1,6 +1,7 @@
 # toc-md
 
 [![Build Status](https://github.com/chocolateboy/toc-md/workflows/test/badge.svg)](https://github.com/chocolateboy/toc-md/actions?query=workflow%3Atest)
+[![NPM Version](https://img.shields.io/npm/v/@chocolateboy/toc-md.svg)](https://www.npmjs.org/package/@chocolateboy/toc-md)
 
 <!-- TOC -->
 

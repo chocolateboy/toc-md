@@ -16,7 +16,7 @@
     "bugs": "https://github.com/chocolateboy/toc-md/issues",
     "main": "./lib/index.js",
     "bin": {
-        "toc-md": "./bin/toc-md"
+        "toc-md": "bin/toc-md"
     },
     "dependencies": {
         "@colors/colors": "^1.6.0",
