@@ -16,10 +16,13 @@ jobs:
   publish:
     name: 'Publish to NPM'
     runs-on: 'ubuntu-latest'
+    permissions:
+      id-token: write # Required for OIDC
+      contents: read
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: install pnpm
         uses: pnpm/action-setup@v4
@@ -27,7 +30,7 @@ jobs:
           version: latest
 
       - name: set up node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           cache: pnpm
           node-version: 24
@@ -39,7 +42,4 @@ jobs:
         run: pnpm run test
 
       - name: publish
-        uses: JS-DevTools/npm-publish@19c28f1ef146469e409470805ea4279d47c3d35c
-        with:
-          access: public
-          token: ${{ secrets.NPM_TOKEN }}
+        run: pnpm publish
