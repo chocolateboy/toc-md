@@ -1,5 +1,5 @@
 {
-    "name": "toc-md-alt",
+    "name": "@chocolateboy/toc-md",
     "version": "0.5.0",
     "description": "Generate a markdown TOC (table of contents)",
     "license": "MIT",
@@ -22,7 +22,6 @@
         "@colors/colors": "^1.6.0",
         "coa": "^2.0.2",
         "inherit": "^2.2.7",
-        "lodash": "^4.17.21",
         "marked": "^17.0.3",
         "parse5": "^8.0.0",
         "vow-fs": "^0.3.6",

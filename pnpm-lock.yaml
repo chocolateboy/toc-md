@@ -17,9 +17,6 @@ importers:
       inherit:
         specifier: ^2.2.7
         version: 2.2.7
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.23
       marked:
         specifier: ^17.0.3
         version: 17.0.3
@@ -275,9 +272,6 @@ packages:
 
   lodash.wrap@3.0.1:
     resolution: {integrity: sha512-DG1m5ZU7tt5HC1c/UnwhTD3gcjMfAm0JvoamALYZDSxEmQlJrGclclL9nh/WmcthxnfYN53UQa7uKYMvBV+RAg==}
-
-  lodash@4.17.23:
-    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
 
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -692,8 +686,6 @@ snapshots:
   lodash.wrap@3.0.1:
     dependencies:
       lodash._createwrapper: 3.2.0
-
-  lodash@4.17.23: {}
 
   log-symbols@4.1.0:
     dependencies:

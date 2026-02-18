@@ -2,11 +2,11 @@
 
 [![Build Status](https://github.com/chocolateboy/toc-md/workflows/test/badge.svg)](https://github.com/chocolateboy/toc-md/actions?query=workflow%3Atest)
 
-This is a fork of `toc-md`. See `CHANGELOG.md` for more details.
+This is a fork of [`toc-md-alt`](https://github.com/theogravity/toc-md), which is a fork of [toc-md](https://githib.com/eGavr/toc-md) by [eGavr](https://github.com/eGavr). See the `CHANGELOG.md` for more details.
 
 ---
 
-Generates a markdown TOC (table of contents).
+A CLI tool to generate a markdown TOC (table of contents).
 
 The tool can be used for English and Russian languages.
 
@@ -19,9 +19,9 @@ The tool can be used for English and Russian languages.
     - [Insert](#insert)
     - [Clean](#clean)
 - [Advanced TOC](#advanced-toc)
-  - [Ignoring of headers](#ignoring-of-headers)
-  - [Displaying of headers](#displaying-of-headers)
-  - [Redefinition of anchors](#redefinition-of-anchors)
+  - [Ignoring headers](#ignoring-headers)
+  - [Changing headers](#changing-headers)
+  - [Renaming anchors](#renaming-anchors)
 
 <!-- TOC END -->
 
@@ -36,14 +36,14 @@ Two tests have been disabled, but I feel the edge cases it is testing for will r
 ## Install
 
 ```bash
-$ npm install toc-md-alt
+$ npm install @chocolateboy/toc-md
 ```
 
 ## Usage
 
-Add an HTML comment `<!-- TOC -->` to a markdown file.
+Add a HTML comment `<!-- TOC -->` to a markdown file.
 
-A TOC will be generated exactly on this place for the following headers.
+A TOC will be generated exactly in this place for the following headers.
 
 To migrate from an existing TOC generator with start and end markers, replace them with `<!-- TOC -->` and `<!-- TOC END -->`.
 
@@ -68,7 +68,7 @@ Arguments:
   TARGET : Path to an output markdown file
 ```
 
-If argument `TARGET` is not specified, a result will be written to `SOURCE`.
+If the `TARGET` argument is not specified, the result will be written to `SOURCE`.
 
 <!-- TOC:ignore -->
 #### Example
@@ -84,16 +84,16 @@ $ toc-md path/to/markdown -m 4 -b '*'
 ##### Clean
 
 ```bash
-$ toc-md path/to/input/markdown path/to/output/markdown --clean
+$ toc-md --clean path/to/input/markdown path/to/output/markdown
 
-$ toc-md path/to/markdown -c
+$ toc-md -c path/to/markdown
 ```
 
 ## Advanced TOC
 
-### Ignoring of headers
+### Ignoring headers
 
-There is an ability to ignore headers in a TOC by adding of the HTML comment<br>`<!-- TOC:ignore -->` before a declaration of a header:
+A header can be omitted from the TOC by adding a `<!-- TOC:ignore -->` HTML comment before a header declaration, e.g.:
 
 ```md
 <!-- TOC:ignore -->
@@ -102,24 +102,24 @@ There is an ability to ignore headers in a TOC by adding of the HTML comment<br>
 
 The header `ololo` will not be displayed in a TOC.
 
-### Displaying of headers
+### Changing headers
 
-There is an ability to change a displaying of a header in a TOC by adding of the HTML comment<br>`<!-- TOC:display:header_text -->` before a declaration of a header:
+The name of a header in a TOC can be changed by adding a `<!-- TOC:display:header_text -->` HTML comment before a header declaration, e.g.:
 
 ```md
 <!-- TOC:display:blah -->
 # ololo
 ```
 
-The header `ololo` will be displayed in a TOC as `blah`.
+The `ololo` header will be displayed in the TOC as `blah`.
 
-### Redefinition of anchors
+### Renaming anchors
 
-There is an ability to redefine an anchor which will be generated for a header by adding of the HTML tag `a` with attribute `name` before a declaration of a header:
+The anchor which is generated for a header can be redefined by adding an `<a name="..."></a>` HTML tag before a header declaration, e.g.:
 
 ```md
 <a name="blah"></a>
 # ololo
 ```
 
-The header `ololo` will refer to the anchor `blah` in a TOC.
+The header `ololo` will refer to the anchor `blah` in the TOC.

@@ -1,4 +1,4 @@
-var assert = require('assert');
+var assert = require('node:assert');
 
 var readFiles = require('./test-utils').readFiles,
     toc = require('../../lib/index');
