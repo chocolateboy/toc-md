@@ -146,7 +146,7 @@ The `Options` header in the TOC will link to the `foo-options` anchor.
 
 # VERSION
 
-0.5.0
+0.5.1
 
 # AUTHOR
 

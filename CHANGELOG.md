@@ -1,3 +1,7 @@
+## 0.5.1 - 2026-02-18
+
+- documentation tweaks
+
 ## 0.5.0 - 2026-02-18
 
 **Contributor:** chocolateboy
