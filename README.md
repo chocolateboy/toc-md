@@ -152,7 +152,7 @@ The `Options` header in the TOC will link to the `foo-options` anchor.
 
 - [eGavr](https://github.com/egavr)
 
-This is a fork of [toc-md-alt](https://www.npmjs.com/package/toc-md) by
+This is a fork of [toc-md-alt](https://www.npmjs.com/package/toc-md-alt) by
 [theogravity](https://github.com/theogravity), which is a fork of
 [toc-md](https://www.npmjs.com/package/toc-md) by [eGavr](https://github.com/eGavr).
 
