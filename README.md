@@ -22,6 +22,11 @@ The tool can be used for English and Russian languages.
   - [Ignoring headers](#ignoring-headers)
   - [Changing headers](#changing-headers)
   - [Renaming anchors](#renaming-anchors)
+- [COMPATIBILITY](#compatibility)
+- [SEE ALSO](#see-also)
+- [VERSION](#version)
+- [AUTHOR](#author)
+- [COPYRIGHT AND LICENSE](#copyright-and-license)
 
 <!-- TOC END -->
 
@@ -123,3 +128,26 @@ The anchor which is generated for a header can be redefined by adding an `<a nam
 ```
 
 The header `ololo` will refer to the anchor `blah` in the TOC.
+
+# COMPATIBILITY
+
+- [Maintained Node.js versions](https://github.com/nodejs/Release#readme) and compatible browsers
+
+# SEE ALSO
+
+- [markedpp](https://github.com/commenthol/markedpp)
+
+# VERSION
+
+0.5.0
+
+# AUTHOR
+
+- [eGavr](https://github.com/egavr)
+
+# COPYRIGHT AND LICENSE
+
+Copyright © 2014 by eGavr.
+
+This is free software; you can redistribute it and/or modify it under the terms
+of the [MIT license](https://opensource.org/licenses/MIT).
