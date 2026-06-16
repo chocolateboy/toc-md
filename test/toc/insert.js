@@ -193,7 +193,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.strictEqual(res, files['toc-md']);
                 done();
             }
         });
