@@ -146,7 +146,7 @@ The corresponding `Options` header in the TOC will link to the `foo-options` anc
 
 # VERSION
 
-0.6.0
+0.7.0
 
 # AUTHOR
 

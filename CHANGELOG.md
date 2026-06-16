@@ -1,20 +1,24 @@
+## 0.7.0 - 2026-06-16
+
+- remove obsolete/vulnerable dependencies
+
 ## 0.6.0 - 2026-06-16
 
 ### breaking changes
 
-drop support for spaces before headers, e.g.
+- drop support for spaces before headers, e.g.
 
-#### input
+    **input**:
 
-`  ## h1`
+    `  ## h1`
 
-#### before
+    **before**:
 
-`[  h1](#--h1)`
+    `[  h1](#--h1)`
 
-#### after
+    **after**:
 
-`[h1](#h1)`
+    `[h1](#h1)`
 
 ### changes
 
