@@ -22,13 +22,13 @@
         "@colors/colors": "^1.6.0",
         "coa": "^2.0.2",
         "inherit": "^2.2.7",
-        "marked": "^17.0.3",
-        "parse5": "^8.0.0",
+        "marked": "18.0.5",
+        "parse5": "^8.0.1",
         "vow-fs": "^0.3.6",
         "vow-node": "^0.3.0"
     },
     "devDependencies": {
-        "mocha": "^11.1.0",
+        "mocha": "^11.7.6",
         "must": "^0.13.4"
     },
     "scripts": {

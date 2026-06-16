@@ -134,7 +134,7 @@ an `<a name="..."></a>` HTML tag before a header declaration, e.g.:
 # Options
 ```
 
-The `Options` header in the TOC will link to the `foo-options` anchor.
+The corresponding `Options` header in the TOC will link to the `foo-options` anchor.
 
 # COMPATIBILITY
 

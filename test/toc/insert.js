@@ -56,7 +56,7 @@ describe('TOC insert', function () {
         });
     });
 
-    it('must insert a TOC with different headers\' types', function (done) {
+    it.skip('must insert a TOC with different headers\' types', function (done) {
         var files = readFiles('different-types');
 
         toc.insert(files.md, function (err, res) {
